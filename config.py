@@ -18,7 +18,7 @@ def configurar_parametros(auth: str, path: str, referer: str):
     return params
 
 # Função para criar JSON
-def criar_registro(dataPostagem, titulo, preco, url, regiao, regiaoCidade, resumo):
+def criar_registro(dataPostagem, titulo, tamanho, quartos, banheiros, vagas, tipo, preco, url, regiao, regiaoCidade, resumo):
     print("titulo: " + str(titulo))
     print("Preco: " + str(preco))
     print(regiao)
@@ -28,10 +28,11 @@ def criar_registro(dataPostagem, titulo, preco, url, regiao, regiaoCidade, resum
     
     json = { 
         "preco": preco,
-        "metragem": metragem,
+        "metragem": tamanho,
         "quartos": quartos,
         "banheiros": banheiros,
         "vagas": vagas,
+        "tipo": tipo,
         "titulo": titulo,
         "regiao": regiao,
         "dataPostagem": dataPostagem,
